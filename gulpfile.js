@@ -14,7 +14,6 @@ const buffer = require('vinyl-buffer');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
-
 // HTML 
 
 var htmlWatch = '**/*.html';
