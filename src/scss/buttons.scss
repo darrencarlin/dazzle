@@ -1,0 +1,37 @@
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: $default-margin;
+  &.light {
+    background: #fff;
+    color: #000;
+    border: 2px solid #ccc;
+  }
+  &.dark {
+    background: #333;
+    color: #fff;
+    border: 1px solid #ccc;
+  }
+  &.primary {
+    background: $primary-color;
+    color: #fff;
+  }
+  &.secondary {
+    background: $secondary-color;
+    color: #fff;
+  }
+  &.success {
+    background: $success-color;
+    color: #fff;
+  }
+  &.error {
+    background: $error-color;
+    color: #fff;
+  }
+  &.large {
+    padding: 15px 25px;
+  }
+  &.rounded {
+    border-radius: 5px;
+  }
+}

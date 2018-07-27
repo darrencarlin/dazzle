@@ -1,0 +1,22 @@
+form {
+  padding: $default-padding;
+  text-align: center;
+  label {
+    display: block;
+    padding: 10px;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #fff,
+      0 1px 0 #fff;
+    resize: vertical;
+  }
+  button {
+    border: 0;
+    cursor: pointer;
+  }
+}

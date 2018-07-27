@@ -1,13 +1,22 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   color: $text-color;
   line-height: $text-line-height;
+  letter-spacing: $letter-spacing;
 }
 
 h1,
@@ -17,8 +26,19 @@ h4,
 h5,
 h6 {
   color: $heading-color;
-  line-height: $heading-line-height;
   font-family: "Roboto Slab", sans-serif;
+  line-height: $heading-line-height;
+  padding: $default-padding;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+ul {
+  padding: $default-padding;
 }
 
 a {

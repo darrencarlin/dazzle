@@ -1,5 +1,7 @@
-@import 'base/variables';
-@import 'base/*';
-@import 'layout/*';
-@import 'modules/*';
-@import 'utilites/*';       
+@import "variables";
+@import "helpers";
+@import "normalize";
+@import "layout";
+@import "base";
+@import "buttons";
+@import "forms";
