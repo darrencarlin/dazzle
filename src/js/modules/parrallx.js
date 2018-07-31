@@ -1,6 +1,9 @@
 // Parallax
 
-let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+let width =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth,
   parallaxElem = document.querySelectorAll(".parallax"),
   parallaxQty = parallaxElem.length;
 

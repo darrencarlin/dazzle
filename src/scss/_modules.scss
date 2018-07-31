@@ -1,0 +1,71 @@
+/* Custom Styles Based On Each Individual Project */
+
+nav {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    display: flex;
+  }
+  nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: auto;
+    width: 250px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background: #fafafa;
+    height: 100vh;
+    img {
+      display: block;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      border: 3px solid $mint;
+      margin: 20px;
+      object-fit: cover;
+      padding: 0;
+      margin: $default-padding;
+    }
+    ul {
+      flex-direction: column;
+      li {
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+        width: 250px;
+        &:hover {
+          cursor: pointer;
+          background: #e6e6e6;
+        }
+        a {
+          padding: 10px 0;
+          display: block;
+        }
+      }
+      li:first-child {
+        border-top: 2px solid #ddd;
+      }
+      li:last-child {
+        border-bottom: 2px solid #ddd;
+      }
+    }
+  }
+
+  main {
+    margin-left: 250px;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+  }
+}
