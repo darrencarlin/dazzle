@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   const elements = Array.from(document.getElementsByTagName("*"));
   let elements2 = Array.from(document.getElementsByTagName("*"));
-  elements2.splice(0, 11);
+  elements2.splice(0, 12);
   elements2.splice(1, 10);
   elements2.splice(33, 1);
   console.log(elements2);
