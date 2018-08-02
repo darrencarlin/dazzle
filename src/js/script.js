@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const cog = document.getElementById("cog");
   const palette = document.getElementById("palette");
   const highlight = document.getElementById("highlight");
+  const enlarge = document.getElementById("enlarge");
+  const reduce = document.getElementById("reduce");
 
   cog.addEventListener("click", () => {
     toolbar.classList.toggle("slide-out");
@@ -38,5 +40,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     elements.forEach(elements => {
       elements.classList.toggle("outline");
     });
+  });
+
+  enlarge.addEventListener("click", () => {
+    let fontSize = window
+      .getComputedStyle(body, null)
+      .getPropertyValue("font-size");
+    console.log(typeof fontSize);
+    enlarge.classList.toggle("clicked");
+    body.style.fontSize = `${(fontSize += 1)}px`;
+  });
+  reduce.addEventListener("click", () => {
+    let px = body.style.fontSize.value;
+    reduce.classList.toggle("clicked");
+    body.style.fontSize = `${(px -= 1)}px`;
   });
 });
