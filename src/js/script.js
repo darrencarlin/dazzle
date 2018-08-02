@@ -17,7 +17,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   const body = document.body;
+
   const elements = Array.from(document.getElementsByTagName("*"));
+  let elements2 = Array.from(document.getElementsByTagName("*"));
+  elements2.splice(0, 10);
+  elements2.splice(1, 8);
+  elements2.splice(38, 1);
+  console.log(elements2);
   const toolbar = document.getElementById("toolbar");
   const cog = document.getElementById("cog");
   const palette = document.getElementById("palette");
@@ -42,17 +48,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   });
 
+  const changeFont = (arr, direction) => {
+    for (let i = 0; i < arr.length; i++) {
+      let fontSize = window
+        .getComputedStyle(arr[i], null)
+        .getPropertyValue("font-size");
+      let value = parseInt(fontSize.slice(0, 2));
+      if (direction === "positive") {
+        arr[i].style.fontSize = `${(value += 1)}px`;
+      } else {
+        arr[i].style.fontSize = `${(value -= 1)}px`;
+      }
+    }
+  };
+
   enlarge.addEventListener("click", () => {
-    let fontSize = window
-      .getComputedStyle(body, null)
-      .getPropertyValue("font-size");
-    console.log(typeof fontSize);
-    enlarge.classList.toggle("clicked");
-    body.style.fontSize = `${(fontSize += 1)}px`;
+    changeFont(elements2, "positive");
   });
+
   reduce.addEventListener("click", () => {
-    let px = body.style.fontSize.value;
-    reduce.classList.toggle("clicked");
-    body.style.fontSize = `${(px -= 1)}px`;
+    changeFont(elements2, "negative");
   });
 });
